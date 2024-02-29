@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Drawer, List, ListItem, TextField, Button, Avatar } from '@mui/material';
+import { Drawer, List, ListItem, TextField, Button, Avatar, Typography } from '@mui/material';
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
@@ -76,7 +76,7 @@ const Chat = () => {
             </Button>
             <Drawer anchor="right" open={isOpen} onClose={handleDrawerClose} style={{ width: '300px !important' }}>
                 {/* Close button at the top */}
-                <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', padding: '8px',borderBottom : '2px black solid' }}>
+                <div style={{ display: 'flex', flexDirection : 'row-reverse' ,justifyContent: 'space-between', alignItems: 'center', padding: '8px',borderBottom : '2px black solid' }}>
                     <Button
                         color="secondary"
                         sx={{
@@ -89,6 +89,7 @@ const Chat = () => {
                     >
                         <CloseIcon style={{ color: 'white' }} />
                     </Button>
+                    <Typography variant='h5' sx={{fontWeight : '800' , color : 'red' , fontSize : '1.8rem'}}>ChatBot</Typography>
 
                     {/* <Button variant="outlined" color="secondary" onClick={handleClearChat}>
                         Clear Chat
